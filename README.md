@@ -1,4 +1,54 @@
-# Blanat Challenge
+# Blanat Challenge - The challenge is now closed
+
+Thank you all for your contribution. As of 1st of March 2024, this challenge is officially closed and we won't be actively maintaining it.
+
+### Final Leaderboard
+Congratulations to all participants, it was a great learning journey. Congratulations to **[k34n4y138](https://github.com/k34n4y138)** for setting the fastest time of `2.13s`. Below the final leaderboard:
+
+| Username           | Avg Time (ms) | Median Time (ms) | Language | Humanized Time                |
+|--------------------|---------------|------------------|----------|-------------------------------|
+| k34n4y138          |2129           | 1916           | cpp       | 2.13 sec (≈ 0 min 2.13 sec)   |
+| anassajaanan       | 3231          | 3126             | c        | 3.23 sec (≈ 0 min 3.23 sec)   |
+| superma-C          |3595        	 | 3367         | c      	| 3.60 sec (≈	0 min	3.60 sec)   |
+| ibrataha8          | 12198         | 8515             | cpp      | 12.20 sec (≈ 0 min 12.20 sec) |
+| NotAsheraf         | 34748         | 34746            | rs       | 34.75 sec (≈ 0 min 34.75 sec) |
+| webNeat             |56498         | 50557         | php    	| 56.50 sec (≈	0 min	56.50 sec) |
+| ismail-bertalfilali|78633          | 78633            | java    |  78.63 sec (≈ 1 min 18.63 sec)|
+| sqrt-minus-one     |78971        	 | 78973        |  cpp      	| 78.97 sec (≈	1 min	18.97 sec)|
+| ILKAY-BRAHIM       | 78971         | 79006            | cpp      | 78.97 sec (≈ 1 min 18.97 sec) |
+| yousfiSaad        	|79063         | 79066         | cpp    	| 79.06 sec (≈	1 min	19.06 sec) |
+| samir              |79777          | 79763         | cpp      |  79.77 sec (≈ 1 min 19.77 sec) |
+| j-mounim           |83543          | 83430           | js      |  83.54 sec (≈ 1 min 23.54 sec)|
+| imOphen            |103018         | 103010           |  py      |  103.02 sec (≈ 1 min 43.02 sec)|
+| lhousaine          |108599         | 108673         | js       | 108.60 sec (≈ 1 min 48.60 sec)|
+| Moohaa             | 177097        | 175511           | java     | 177.10 sec (≈ 2 min 57.10 sec)|
+| aboullaite         | 194739        | 194725           | java     | 194.74 sec (≈ 3 min 14.74 sec)|
+| houcine7           | 194900        | 185755           | java     | 194.90 sec (≈ 3 min 14.90 sec)|
+| guizo792           | 347432        | 347311           | java     | 347.43 sec (≈ 5 min 47.43 sec)|
+
+#### How submissions were evaluated ?
+Test has been run on a [N2 Google cloud VM](https://cloud.google.com/compute/docs/general-purpose-machines#n2_series) with 16 vCPU, 64GB of RAM and 100Go persisant SSD disk.
+The [runner](https://github.com/geeksblabla/blarun) was updated to evaluate the submisions into 2 steps:
+- First, a small and fast check of 100K entries to check for corretness
+- Then, a total of 10 runs over the final 1B row of data, where the slowest and the fastest runs are discarded. The rest is what we include in the final result. The timeout has been reduced to 10mins only.
+
+### FAQ
+Q: My submission is not there, what happened ?
+A: If you cannot find your submission that means it's either failed the correctness check or timed out. Please check the `run.log` file for more details on why this could be the case. We won't be able to comment on every single submission, but we hope you can find the answer yourself.
+
+Q: My submission was on the leaderboard before, why it got removed now ?
+A: Again, it's either timeout or it failed to pass the correctness check. Please check the `run.log` file for details and look for your username.
+
+Q: What is `run.log`
+A: It is the runner's log from the test server.
+
+Q: Can I submit after the challenge is closed ?
+A: No, we will not be reviwing nor testing any submissions moving forward. This repo will be kept for educational purposes only
+
+Q: Will there be future challenges like this ?
+A: Not in the near future! This turned out to be much more time consuming than we thought :) However we will try to keep it a yearly tradition. See you hopefully next year
+
+### Description
 
 Blanat Challenge is a coding challenge designed to test your coding skills and your ability to write optimized code. [The challenge](#challenge-the-cheapest-city) primarily focuses on writing a program capable of efficiently handling large amounts of data and promptly returning the solution. It is open to everyone, and you can submit your code in any of the following languages: C, C++, Java, Rust, Python, PHP or JavaScript. This is your chance to demonstrate that your favorite programming language is the best and the fastest one! 😀
 
@@ -45,7 +95,7 @@ Assist Adnan by writing a program, using any allowed language, to find the city 
 - Each city may have the same product duplicated several times with different or identical prices.
 - Your code will process a 10^9 (1 billion) line CSV file.
 - You are allowed to code with any language from this list: C, C++, Java, Python, Rust, JavaScript, PHP.
-- The input file is located on "input.txt" 
+- The input file is located on "input.txt"
 - Make sure the result are saved in a file saved under `./output.txt`
 
 ### Output format
@@ -67,6 +117,7 @@ Assist Adnan by writing a program, using any allowed language, to find the city 
 - When you feel that your code is ready, create a folder under the "/submissions" folder with your GitHub handle as the name. Add the code to this folder and open a pull request (PR).
 - Before creating the PR, your code has to produce the same result as the output below.
 - You are allowed to submit the code several times with different langs.
+- Only standard libraries provided by te language you picked can be used. No external/additional libs can be used
 - Each code will be reviewed manually. Any fraudulent attempt will result in your account being banned, and you will be disqualified from the challenge.
 - Java solutions should use `Main.java` and have a `public class Main` as a top-level class.
 - Contestants are supposed to read input from the file in their current working directory named `input.txt` and write the output to a file in the same directory named `output.txt`.
@@ -86,6 +137,7 @@ python3 gen.py --rows <number_of_rows>
 > Note that to generate the 1B row file, it will require a couple of minutes to generate and would take around `~22Gb` of disk space.
 
 ### INPUT
+
 Below are short examples for better understanding:
 
 ```csv
@@ -146,25 +198,7 @@ The competition focuses solely on correctness and speed of execution to gauge pa
 
 ## Timeline
 
-The challenge will run from the 19th of February 2024 until 29th of February 2024. The winner will be announced during March 1st 2024 in our social media challenges
-
-## Leaderboard
-> Last updated: Thu 24 Feb 2024, 7pm Moroccan time
-
-| Username       | Avg Time (ms) | Median Time (ms) | Language | Humanized Time                |
-|----------------|---------------|------------------|----------|-------------------------------|
-| sqrt-minus-one | 40426         | 39308            | C++      | 40.43 sec (≈ 40.43 sec)       |
-| dauom          | 56548         | 57044            | C++      | 56.55 sec (≈ 56.55 sec)       |
-| NotAsheraf     | 99730         | 97091            | Rust     | 99.73 sec (≈ 1.66 min)       |
-| essmehdi       | 108141        | 108182           | Rust     | 108.14 sec (≈ 1.80 min)      |
-| webNeat        | 160221        | 150202           | PHP      | 160.22 sec (≈ 2.67 min)      |
-| mohammedfatihX | 249995        | 252203           | Java     | 250.00 sec (≈ 4.17 min)      |
-| anassajaanan   | 258322        | 259895           | C        | 258.32 sec (≈ 4.30 min)      |
-| aboullaite     | 368758        | 368167           | Java     | 368.76 sec (≈ 6.15 min)      |
-| sm3xy          | 903274        | 900806           | Python   | 903.27 sec (≈ 15.05 min)     |
-| Moohaa         | 1024699       | 1024176          | Java     | 1024.70 sec (≈ 17.08 min)    |
-
-We only list solutions with correct results that run within ~15 min. We unfortunately can't give feedback on every submission and we invite you to read the full assignement.
+The challenge will run from the 19th of February 2024 until 29th of February 2024. The winner will be announced on March 1st 2024 in our social media challenges
 
 ## Prize
 
